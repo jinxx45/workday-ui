@@ -68,21 +68,21 @@ const PayslipsPage = () => {
               <th className="border p-2">Date</th>
               <th className="border p-2">Amount</th>
               <th className="border p-2">Status</th>
-              <th className="border p-2 text-right">Actions</th>
+              <th className="border p-2">Actions</th>
             </tr>
           </thead>
           <tbody>
             {payslips.map((payslip) => (
               <tr key={payslip.id} className="border">
-                <td className="border p-2">{payslip.date}</td>
-                <td className="border p-2">{payslip.amount}</td>
-                <td className="border p-2">{payslip.status}</td>
-                <td className="border p-2 text-right">
+                <td className="border p-2 text-center">{payslip.date}</td>
+                <td className="border p-2 text-center">{payslip.amount}</td>
+                <td className="border p-2 text-center">{payslip.status}</td>
+                <td className="border p-2 flex justify-center">
                   <button
                     onClick={() => generatePDF(payslip)}
                     className="text-blue-500 flex items-center"
                   >
-                    <Download className="mr-2 h-4 w-4" /> Download
+                    <Download className="mr-2 h-4 w-4 text-center" /> Download
                   </button>
                 </td>
               </tr>

@@ -184,7 +184,7 @@ const DialogBox: React.FC<DialogBoxProps> = ({ isOpen, onClose }) => {
           >
             Cancel
           </button>
-          <button className="px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 rounded-lg">
+          <button className="px-4 py-2 bg-teal-400 text-white hover:bg-teal-600 rounded-lg">
             Download
           </button>
         </div>

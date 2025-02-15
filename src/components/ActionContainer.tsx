@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import ActionItem from "./Action";
 
 interface Action {
@@ -17,6 +18,7 @@ const actions: Action[] = [
 const ActionContainer = () => {
   // Show only the first 3 actions
   const visibleActions = actions.slice(0, 3);
+  const navigate = useNavigate();
 
   return (
     <div className="w-full h-full container bg-white p-6 rounded-lg shadow">
@@ -42,7 +44,10 @@ const ActionContainer = () => {
 
       {/* View All Button - Navigates to Tasks page */}
       {actions.length > 3 && (
-        <button className="mt-4 px-4 py-2 bg-teal-400 text-white rounded-lg hover:bg-teal-600 transition">
+        <button
+          onClick={() => navigate("/tasks")}
+          className="mt-4 px-4 py-2 bg-teal-400 text-white rounded-lg hover:bg-teal-600 transition"
+        >
           View all Tasks
         </button>
       )}
