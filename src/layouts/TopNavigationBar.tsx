@@ -1,21 +1,14 @@
-import { useState } from "react";
 import SearchBar from "@/components/SearchBar";
-import {
-  Menu,
-  Bell,
-  Mail,
-  Settings,
-  User,
-  Home,
-  Calendar,
-  FileText,
-} from "lucide-react";
+import { Menu, Bell, Mail, Settings, User } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface TopNavigationBarProps {
   logoSrc: string;
 }
 
 const TopNavigationBar: React.FC<TopNavigationBarProps> = ({ logoSrc }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="relative">
       {/* Navigation Bar */}
@@ -26,7 +19,12 @@ const TopNavigationBar: React.FC<TopNavigationBarProps> = ({ logoSrc }) => {
             <Menu className="h-6 w-6" />
           </button>
           {/* Company Logo */}
-          <img src={logoSrc} alt="Company Logo" className="h-15 w-12" />
+          <img
+            onClick={() => navigate("/")}
+            src={logoSrc}
+            alt="Company Logo"
+            className="h-15 w-12"
+          />
         </div>
 
         {/* Center: Search Bar */}
