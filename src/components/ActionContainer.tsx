@@ -42,7 +42,7 @@ const ActionContainer = () => {
 
       {/* View All Button - Navigates to Tasks page */}
       {actions.length > 3 && (
-        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
+        <button className="mt-4 px-4 py-2 bg-teal-400 text-white rounded-lg hover:bg-teal-600 transition">
           View all Tasks
         </button>
       )}
